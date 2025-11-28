@@ -23,14 +23,6 @@ hamburger.addEventListener("click", (e) => {
     }
 });
 
-// Fermer si clic sur un lien
-const navLinks = navMenu.querySelectorAll("a");
-navLinks.forEach(link => {
-    link.addEventListener("click", () => closeMenu());
-});
-
-// Fermer si clic sur l’overlay sombre
-overlay.addEventListener("click", () => closeMenu());
 
 // Fermer si clic ailleurs
 document.addEventListener("click", () => {
