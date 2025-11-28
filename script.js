@@ -22,9 +22,3 @@ hamburger.addEventListener("click", (e) => {
         openMenu();
     }
 });
-
-
-// Fermer si clic ailleurs
-document.addEventListener("click", () => {
-    if (navMenu.style.right === "0px") closeMenu();
-});
