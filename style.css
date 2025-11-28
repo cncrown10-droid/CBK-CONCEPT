@@ -1,0 +1,136 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    padding: 15px 20px;
+    background: #111;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* HAMBURGER */
+.hamburger {
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 4px;
+    margin: 5px 0;
+    background: white;
+    transition: 0.4s;
+}
+
+/* MENU */
+nav {
+    position: fixed;
+    top: 0;
+    right: -250px; /* caché */
+    width: 250px;
+    height: 100vh;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: 0.4s;
+}
+
+nav a {
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav a:hover {
+    background: #333;
+}
+
+/* SECTION HOME */
+.home-section {
+    height: 100vh;
+    background: url('home.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.home-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+}
+
+.home-section .content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding-top: 180px;
+}
+
+.btn {
+    display: inline-block;
+    background: #0066ff;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* AUTRES SECTIONS */
+.section {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.services-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    width: 200px;
+    height: 150px;
+    background: #ccc;
+    border-radius: 10px;
+}
