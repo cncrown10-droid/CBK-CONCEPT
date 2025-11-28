@@ -1,11 +1,38 @@
-// Ouverture / fermeture du menu hamburger
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav-menu");
+const overlay = document.getElementById("overlay");
 
-hamburger.addEventListener("click", () => {
+function openMenu() {
+    navMenu.style.right = "0px";
+    hamburger.classList.add("active");
+    overlay.classList.add("active");
+}
+
+function closeMenu() {
+    navMenu.style.right = "-250px";
+    hamburger.classList.remove("active");
+    overlay.classList.remove("active");
+}
+
+hamburger.addEventListener("click", (e) => {
+    e.stopPropagation();
     if (navMenu.style.right === "0px") {
-        navMenu.style.right = "-250px";
+        closeMenu();
     } else {
-        navMenu.style.right = "0px";
+        openMenu();
     }
+});
+
+// Fermer si clic sur un lien
+const navLinks = navMenu.querySelectorAll("a");
+navLinks.forEach(link => {
+    link.addEventListener("click", () => closeMenu());
+});
+
+// Fermer si clic sur l’overlay sombre
+overlay.addEventListener("click", () => closeMenu());
+
+// Fermer si clic ailleurs
+document.addEventListener("click", () => {
+    if (navMenu.style.right === "0px") closeMenu();
 });
